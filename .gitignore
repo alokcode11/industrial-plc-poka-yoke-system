@@ -1,0 +1,20 @@
+# Environment variables and sensitive configurations
+.env
+*.env.local
+
+# Factory production logs and CSV audit trails
+logs/
+*.csv
+
+# Python byte-code and virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# Operating system artifacts
+Thumbs.db
+.DS_Store
+*.log

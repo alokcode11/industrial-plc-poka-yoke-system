@@ -1,0 +1,116 @@
+{
+  "1": {
+    "name": "1R-5MM 766MM 20\" CHESSIS",
+    "coil_length": 766,
+    "angle": 115,
+    "allowed_codes": ["AJK0001728"]
+  },
+  "2": {
+    "name": "1R-5MM 806MM 20\" CHESSIS",
+    "coil_length": 806,
+    "angle": 113,
+    "allowed_codes": []
+  },
+  "3": {
+    "name": "1.5R-5MM 766MM 20\" CHESSIS",
+    "coil_length": 766,
+    "angle": 113,
+    "allowed_codes": []
+  },
+  "4": {
+    "name": "1.5R-5MM 806MM 20\" CHESSIS",
+    "coil_length": 806,
+    "angle": 113,
+    "allowed_codes": []
+  },
+  "5": {
+    "name": "1.5R-5MM 806MM 22\" CHESSIS",
+    "coil_length": 806,
+    "angle": 112,
+    "allowed_codes": []
+  },
+  "6": {
+    "name": "1.5R-5MM 850MM 20\" POLLAR",
+    "coil_length": 850,
+    "angle": 110,
+    "allowed_codes": []
+  },
+  "7": {
+    "name": "2R-5MM 766MM 20\" CHESSIS",
+    "coil_length": 766,
+    "angle": 108,
+    "allowed_codes": []
+  },
+  "8": {
+    "name": "2R-5MM 806MM 20\" CHESSIS",
+    "coil_length": 806,
+    "angle": 104,
+    "allowed_codes": []
+  },
+  "9": {
+    "name": "2R-5MM 806MM 22\" CHESSIS",
+    "coil_length": 806,
+    "angle": 108,
+    "allowed_codes": []
+  },
+  "10": {
+    "name": "2.5R-5MM 766MM 22\" CHESSIS",
+    "coil_length": 766,
+    "angle": 108,
+    "allowed_codes": []
+  },
+  "11": {
+    "name": "1R-5MM 780MM 18\" CHESSIS",
+    "coil_length": 780,
+    "angle": 115,
+    "allowed_codes": []
+  },
+  "12": {
+    "name": "1R-5MM 775MM 18\" CHESSIS",
+    "coil_length": 775,
+    "angle": 114,
+    "allowed_codes": []
+  },
+  "13": {
+    "name": "1R-5MM 765MM 18\" CHESSIS",
+    "coil_length": 765,
+    "angle": 112,
+    "allowed_codes": []
+  },
+  "14": {
+    "name": "2.5R-5MM 806MM 20\" POLLAR",
+    "coil_length": 806,
+    "angle": 108,
+    "allowed_codes": []
+  },
+  "15": {
+    "name": "2.7R-5MM 900MM 26\"",
+    "coil_length": 900,
+    "angle": 106,
+    "allowed_codes": []
+  },
+  "16": {
+    "name": "2.R-5MM 900MM 26\"",
+    "coil_length": 900,
+    "angle": 100,
+    "allowed_codes": []
+  },
+  "17": {
+    "name": "2R-5MM-850MM 20\" POLLAR",
+    "coil_length": 850,
+    "angle": 107,
+    "allowed_codes": []
+  },
+  "18": {
+    "name": "2R-7MM- 26\"",
+    "coil_length": 900,
+    "angle": 100,
+    "allowed_codes": []
+  },
+  "19": {
+    "name": "1.R 858MM-20\"",
+    "coil_length": 858,
+    "angle": 105,
+    "allowed_codes": []
+  }
+}
