@@ -60,9 +60,9 @@ class PokaYokeApp(tk.Tk):
         self.current_program = 0
         self.last_program = 0
         self.is_fullscreen = False
+        self.total_count = 0
         self.ok_count = 0
         self.ng_count = 0
-        self.money_saved = 0
         self.relock_timer_id = None
         
         # Fullscreen bindings
@@ -211,9 +211,20 @@ class PokaYokeApp(tk.Tk):
         stats_frame = tk.Frame(self, bg="#0F172A")
         stats_frame.pack(fill="x", padx=10, pady=5)
         
+        self.lbl_total_badge = tk.Label(
+            stats_frame,
+            text="TOTAL SCANS: 0",
+            font=("Segoe UI", 11, "bold"),
+            fg="#38BDF8",
+            bg="#1E293B",
+            padx=15,
+            pady=6
+        )
+        self.lbl_total_badge.pack(side="left", padx=5)
+
         self.lbl_ok_badge = tk.Label(
             stats_frame,
-            text="PASSED (OK): 0",
+            text="CORRECT (OK): 0",
             font=("Segoe UI", 11, "bold"),
             fg="#10B981",
             bg="#1E293B",
@@ -224,7 +235,7 @@ class PokaYokeApp(tk.Tk):
         
         self.lbl_ng_badge = tk.Label(
             stats_frame,
-            text="BLOCKED (NG): 0",
+            text="WRONG COUNT (NG): 0",
             font=("Segoe UI", 11, "bold"),
             fg="#EF4444",
             bg="#1E293B",
@@ -232,17 +243,6 @@ class PokaYokeApp(tk.Tk):
             pady=6
         )
         self.lbl_ng_badge.pack(side="left", padx=5)
-        
-        self.lbl_saved_badge = tk.Label(
-            stats_frame,
-            text="SCRAP SAVED: ₹0",
-            font=("Segoe UI", 11, "bold"),
-            fg="#FBBF24",
-            bg="#1E293B",
-            padx=15,
-            pady=6
-        )
-        self.lbl_saved_badge.pack(side="left", padx=5)
         
         # ── Recent Scans History Table ────────────────────────
         tbl_frame = tk.Frame(self, bg="#1E293B")
@@ -351,8 +351,10 @@ class PokaYokeApp(tk.Tk):
             self.handle_mismatch(raw_text, timestamp, allowed)
 
     def handle_match(self, scanned_code: str, timestamp: str):
+        self.total_count += 1
         self.ok_count += 1
-        self.lbl_ok_badge.config(text=f"PASSED (OK): {self.ok_count}")
+        self.lbl_total_badge.config(text=f"TOTAL SCANS: {self.total_count}")
+        self.lbl_ok_badge.config(text=f"CORRECT (OK): {self.ok_count}")
         
         # Cancel any previous auto-relock timer
         if self.relock_timer_id:
@@ -387,10 +389,10 @@ class PokaYokeApp(tk.Tk):
         self.relock_timer_id = self.after(AUTO_RELOCK_DELAY_SEC * 1000, self.auto_relock)
 
     def handle_mismatch(self, scanned_code: str, timestamp: str, expected_codes: list):
+        self.total_count += 1
         self.ng_count += 1
-        self.money_saved += 10000
-        self.lbl_ng_badge.config(text=f"BLOCKED (NG): {self.ng_count}")
-        self.lbl_saved_badge.config(text=f"SCRAP SAVED: ₹{self.money_saved:,}")
+        self.lbl_total_badge.config(text=f"TOTAL SCANS: {self.total_count}")
+        self.lbl_ng_badge.config(text=f"WRONG COUNT (NG): {self.ng_count}")
         
         # Cancel any previous auto-relock timer
         if self.relock_timer_id:
