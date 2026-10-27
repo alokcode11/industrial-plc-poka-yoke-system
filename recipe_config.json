@@ -21,7 +21,7 @@
     "name": "1.5R-5MM 806MM 20\" CHESSIS",
     "coil_length": 806,
     "angle": 113,
-    "allowed_codes": []
+    "allowed_codes": ["FAM26FG0484", "AM26FG0484"]
   },
   "5": {
     "name": "1.5R-5MM 806MM 22\" CHESSIS",
@@ -99,7 +99,7 @@
     "name": "2R-5MM-850MM 20\" POLLAR",
     "coil_length": 850,
     "angle": 107,
-    "allowed_codes": []
+    "allowed_codes": ["FAM26FG0484", "AM26FG0484", "7020003556"]
   },
   "18": {
     "name": "2R-7MM- 26\"",
