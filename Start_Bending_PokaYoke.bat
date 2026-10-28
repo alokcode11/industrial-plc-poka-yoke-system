@@ -7,7 +7,7 @@ echo    PG ELECTROPLAST - CONDENSER COIL BENDING POKA-YOKE SYSTEM
 echo ======================================================================
 echo Starting Application...
 
-cd /d "d:\Desktop\Condenser Bending"
+cd /d "%~dp0"
 python app_gui.py
 
 if %ERRORLEVEL% NEQ 0 (
